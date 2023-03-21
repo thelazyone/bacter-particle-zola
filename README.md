@@ -7,8 +7,10 @@ The only change in the theme consists in a different background logic.
 ![](./screenshot.jpg)
 
 Instead of the [Particle.js](https://github.com/VincentGarreau/particles.js/) logic, a field of bouncing balls (call "bacters", because "bacteria" was too easy) and static algae is added.
+
 Each ball has a size and an aggression level, and when/if manages to eat enough algae or other bacters it reproduces, creating
 offsprings with slight changes in parameters.
+
 And voilà, we have evolution! Check out the [Bacter](https://github.com/thelazyone/Bacter/) repo for more info.
 
 The code for Bacter is entirely written in Rust and compiled with wasm-pack. I tried to add as little JS as possible to make it work on Zola.
