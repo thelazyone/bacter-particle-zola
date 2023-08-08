@@ -4,9 +4,7 @@ Particle-zola is a port for Zola of the Particle Jekyll theme. Check out the rep
 
 The only change in the theme consists in a different background logic.
 
-![](./screenshot.jpg)
-
-Instead of the [Particle.js](https://github.com/VincentGarreau/particles.js/) logic, a field of bouncing balls (call "bacters", because "bacteria" was too easy) and static algae is added.
+![](./screenshot.jpg)zo
 
 Each ball has a size and an aggression level, and when/if manages to eat enough algae or other bacters it reproduces, creating
 offsprings with slight changes in parameters.
@@ -33,7 +31,7 @@ Just like the project this is derived from, this theme is free and open source s
 
 ## Credits
 
-- [The Original particle-zola from svavs](https://github.com/svavs/particle-zola)
+- [Silvano Sallese](https://github.com/svavs/particle-zola)
 - [Nathan Randecker](https://github.com/nrandecker/particle)
 - [Willian Justen](https://github.com/willianjusten/will-jekyll-template)
 - [Vincent Garreau](https://github.com/VincentGarreau/particles.js/)
