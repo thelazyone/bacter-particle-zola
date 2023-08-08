@@ -19,9 +19,9 @@ default_language = "en"
 
 [extra]
 # User settings
-username = "Jack Pant's"
+username = "Jack's Den"
 user_description = "Code, Sculpting, Game Design, and everything inbetween"
-user_title = "Software Developer"
+user_title = "Coding Creative"
 email = "anon@anon.com"
 twitter_username = "lorem_ipsum"
 github_username =  "thelazyone"
