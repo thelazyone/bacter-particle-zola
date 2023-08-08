@@ -12,6 +12,19 @@
 </head>
 {% endmacro head %}
 
+{% macro small_head() %}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ config.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description | striptags | trim | truncate(length=160) }}{% else %}{{ config.description }}{% endif %}">
+
+  <link rel="stylesheet" href="{{ config.base_url ~ "/main.css" }}">
+</head>
+{% endmacro small_head %}
+
 {% macro footer() %}
 <footer class="footer">
     <p>&copy; {{ config.extra.username }}</p>
@@ -39,11 +52,27 @@
       <div class="header-links">
         <a class="link" href="#about" data-scroll>About Me</a>
         <a class="link" href="#projects" data-scroll>Projects</a>
+        <a class="link" href="/blog" data-scroll>Blog</a>
       </div>
   </div>
   <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
 </div>
 {% endmacro header %}
+
+
+{% macro small_header() %}
+<div id="particles-js-small">
+ 
+    <div class="header_small" >
+      <h1 >
+        <a href = "/">
+          <span class="site-title">{{ config.extra.username }}</span>
+      </a>
+    </h1>
+  </div>
+
+</div>
+{% endmacro small_header %}
 
 {% macro google_analytics() %}
 <!-- Google Analytics -->

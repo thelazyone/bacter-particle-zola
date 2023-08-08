@@ -23,7 +23,7 @@ In the future it will instead part of the theme building process.
 
 ## Issues
 
-For any problem or suggestion regarding Bacter, please file a [GitHub Issue](https://github.com/thelazyone/Bacter/issues/new).
+For any problem or suggestion regarding Bacter, please file a [GitHub Issue](https://github.com/thelazyone/Bacter/issues/new) on the Bacter repo.
 
 ## License
 

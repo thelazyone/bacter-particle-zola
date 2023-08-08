@@ -1,6 +1,22 @@
-{% extends "index.html" %}
+{% import "macros.html" as macros %}
+{% import "content.html" as content %}
 
-{% block content %}
-  {{ page.content }}
-{% endblock content %}
 
+
+<!DOCTYPE html>
+
+{{ macros::small_head() }}
+
+  <body>
+
+      {{ macros::small_header() }}
+
+      {% block content %}
+        {{ page.content }}
+      {% endblock content %}  
+
+
+      {{ macros::footer() }}
+      {{ macros::google_analytics() }}
+
+  </body>

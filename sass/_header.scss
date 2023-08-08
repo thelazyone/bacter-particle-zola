@@ -13,6 +13,21 @@
   }
 }
 
+#particles-js-small {
+  background: $main;
+  display: flex;
+  vertical-align: top;
+  width: 100%;
+  min-height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  .particles-js-canvas-el {
+    width:100% !important;
+    height:200px !important;
+  }
+}
+
 .header {
   z-index: 1;
   text-align: center;
@@ -33,6 +48,43 @@
       font-size: 100px;
     }
   }
+  .site-description {
+    font-size: 20px;
+    display: block;
+    line-height: 1;
+    color: #FFF;
+    margin-top: 10px;
+    @media only screen and (min-width:$cut){
+      font-size: 40px;
+    }
+  }
+}
+
+.header_small {
+  height: 200px;
+  z-index: 1;
+  text-align: right;
+  color:#FFF;
+  position: relative;
+  top: -30px;
+  left: 0%;
+  margin: 0 auto;
+  .site-title { 
+    font-size: 50px;
+    display: block;
+    line-height: 1;
+    color: #FFF;
+    @media only screen and (min-width:$cut){
+      margin: 0;
+      font-size: 100px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit; /* This will keep the text color the same as its container */
+  }
+  
   .site-description {
     font-size: 20px;
     display: block;
