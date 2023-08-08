@@ -44,15 +44,15 @@
         <span class="site-description">{{ config.extra.user_title }}</span>
       </h1>
       <div class="header-icons">
-        <a aria-label="Send email" href="#"><i class="icon fa fa-envelope"></i></a>
+        <a aria-label="Send email" href="mailto:giacomo.pantalone@gmail.com"><i class="icon fa fa-envelope"></i></a>
         <a aria-label="My Twitter" target="_blank" href="#"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>
-        <a aria-label="My Google Plus" target="_blank" href="#"><i class="icon fa fa-google-plus" aria-hidden="true"></i></a>
-        <a aria-label="My Github" target="_blank" href="#"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
+        <a aria-label="My 3D Store" target="_blank" href="#"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>
+        <a aria-label="My Github" target="_blank" href="https://github.com/thelazyone"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
       </div>
       <div class="header-links">
         <a class="link" href="#about" data-scroll>About Me</a>
         <a class="link" href="#projects" data-scroll>Projects</a>
-        <a class="link" href="/blog" data-scroll>Blog</a>
+        <a class="link" href="blog">Blog</a>
       </div>
   </div>
   <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
@@ -62,11 +62,10 @@
 
 {% macro small_header() %}
 <div id="particles-js-small">
- 
-    <div class="header_small" >
-      <h1 >
-        <a href = "/">
-          <span class="site-title">{{ config.extra.username }}</span>
+  <div class="header_small" >
+    <h1 >
+      <a href = {{ config.base_url }}>
+        <span class="site-title">{{ config.extra.username }}</span>
       </a>
     </h1>
   </div>

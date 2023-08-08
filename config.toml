@@ -17,6 +17,12 @@ build_search_index = false
 # The default language; used in feeds.
 default_language = "en"
 
+generate_feed = true
+
+taxonomies = [
+  { name = "tags" }
+]
+
 [extra]
 # User settings
 username = "Jack's Den"
@@ -26,6 +32,20 @@ email = "anon@anon.com"
 twitter_username = "lorem_ipsum"
 github_username =  "thelazyone"
 gplus_username =  "lorem_ipsum"
+
+# For the blog
+accent = "#05a081"
+accent_light = "#82d0c0"
+nav = [
+  { name = "About", path = "/about/" },
+  { name = "Blog", path = "/blog/" }
+]
+
+latest_text = "Check out my latest post:"
+
+icon = "img/icon.png"
+profile_small = "img/icon.png"
+profile_large = "profile.jpg"
 
 # Google-analytics
 google_analytics.id = ""
