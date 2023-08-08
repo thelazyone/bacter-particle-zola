@@ -139,7 +139,34 @@
       font-size: 35px;
     }
   }
+  .icon-svg {
+    text-align: center;
+    fill: #FFF;
+    color: #FFF;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    border: 2px solid #FFF;
+    transition: all .7s;
+    &:hover {
+      fill: $main;
+      background: #FFF;
+    }
+    &:active {
+      fill: $main;
+      background: #FFF;
+    }
+    @media only screen and (min-width:$cut) {
+      width: 35px;
+      height: 35px;
+      font-size: 35px;
+    }
+  }
 }
+
 
 .down {
   color: #FFF;

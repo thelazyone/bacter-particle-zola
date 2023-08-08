@@ -10,13 +10,14 @@
 
       {{ macros::header() }}
 
+      <section id="projects">
+        {{ content::projects() }}
+      </section>
+      
       <section id="about">
         {{ content::about() }}
       </section>
 
-      <section id="projects">
-        {{ content::projects() }}
-      </section>
 
       {% block content %}
       <p></p>
