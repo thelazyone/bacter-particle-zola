@@ -26,30 +26,40 @@
 <div class="user-details">
   <h3><p> {{ config.extra.user_description }} </p></h3>
 </div>
-<div class="user-projects">
-  <div class="images-right">
-    <img alt="mountains" src="{{ config.base_url ~ "/img/mountains.jpg" }}" />
-  </div>
-  <div class="contents">
-    <h3> Project Title </h3>
-    <ul>
-      <li> Featured Skills</li>
-    </ul>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <a class="project-link" href="#">Check it out</a>
-  </div>
-</div>
+
+<!-- lazy-tree -->
 <div class="user-projects">
   <div class="images-left">
-    <img alt="mountains" src="{{ config.base_url ~ "/img/skate.jpg" }}" />
+    <img alt="mountains" src="{{ config.base_url ~ "/img/oaks.jpg" }}" />
   </div>
   <div class="contents-right">
-    <h3> Project Title </h3>
-    <ul>
-      <li> Featured Skills</li>
-    </ul>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <a class="project-link" href="#">Check it out</a>
+    <h3> Procedural Trees Generation </h3>
+    <p>A Blender script to generate realistic trees with a bottom-up approach. Currently in python, the next version will be re-written in Rust with new more accurate simulation logics.</p>
+    <a class="project-link" href="https://github.com/thelazyone/lazy-tree">Github Repo</a>
+  </div>
+</div>
+
+<!-- bacter -->
+<div class="user-projects">
+  <div class="images-right">
+    <img alt="mountains" src="{{ config.base_url ~ "/img/bacter.jpg" }}" />
+  </div>
+  <div class="contents">
+    <h3> Bacter: an Evolution Simulator </h3>
+    <p>A Petri dish where simple cellular automata compete for reproduction. Not only the fittest characteristic are selected, but over time those maxima move in the parameters space!</p>
+    <a class="project-link" href="https://github.com/thelazyone/Bacter/">Github Repo</a>
+  </div>
+</div>
+
+<!-- fsd -->
+<div class="user-projects">
+  <div class="images-left">
+    <img alt="mountains" src="{{ config.base_url ~ "/img/fsd.jpg" }}" />
+  </div>
+  <div class="contents-right">
+    <h3> Full Spectrum Dominance </h3>
+    <p>A small-scale miniature wargame, with a fresh and modern ruleset. The models and the terrain are all original creations, that players can purchase and print at home, making the game entirely print-and-play.</p>
+    <a class="project-link" href="https://fsd-wargame.com/">Website</a>
   </div>
 </div>
 {% endmacro projects %}
