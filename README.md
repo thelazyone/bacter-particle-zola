@@ -33,7 +33,7 @@ Just like the project this is derived from, this theme is free and open source s
 
 ## Credits
 
-- [Vincent Garreau](https://github.com/svavs/particle-zola)
+- [The Original particle-zola from svavs](https://github.com/svavs/particle-zola)
 - [Nathan Randecker](https://github.com/nrandecker/particle)
 - [Willian Justen](https://github.com/willianjusten/will-jekyll-template)
 - [Vincent Garreau](https://github.com/VincentGarreau/particles.js/)
