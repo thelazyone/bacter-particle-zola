@@ -26,7 +26,7 @@ taxonomies = [
 [extra]
 # User settings
 username = "Giacomo Pantalone"
-user_description = "Code, Sculpting, Game Design, and everything inbetween"
+user_description = "Code, Sculpting, Game Design, and everything inbetween."
 user_title = "Coding Creative"
 email = "anon@anon.com"
 github_username =  "thelazyone"

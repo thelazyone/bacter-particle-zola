@@ -2,16 +2,23 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 90%;
-  max-width: 960px;
+  width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
   @media only screen and (min-width: $cut) {
     width: 80%;
   }
 }
 
+.projects-grid {
+  display: grid;
+  // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px; /* space between columns and rows */
+}
+
 .user-projects {
-  
   margin: 20px auto;
   img {
     max-width: 100%;
@@ -65,6 +72,28 @@
     @media only screen and (min-width: $cut) {
       float: left;
     }
+  }
+}
+
+.images-center {
+  overflow: hidden; /* hides the sides of the image that overflow the container */
+
+  img {
+    width: auto; /* allows the image to maintain its natural width */
+    max-width: none; /* overrides any max-width that might be set elsewhere */
+    display: block; /* centers the image horizontally */
+    margin: 0 auto;
+  }
+
+  @media only screen and (min-width: $cut) {
+    width: 96%; /* changes the container width at larger screen sizes */
+  }
+}
+
+.contents-center {
+  @media only screen and (min-width: $cut) {
+    margin-top: -5%;
+    width: 96%;
   }
 }
 
