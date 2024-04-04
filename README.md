@@ -4,7 +4,7 @@ Particle-zola is a port for Zola of the Particle Jekyll theme. Check out the rep
 
 The only change in the theme consists in a different background logic.
 
-![](./screenshot.jpg)zo
+![](./screenshot.jpg)
 
 Each ball has a size and an aggression level, and when/if manages to eat enough algae or other bacters it reproduces, creating
 offsprings with slight changes in parameters.
