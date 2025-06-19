@@ -43,6 +43,8 @@
     display: block;
     line-height: 1;
     color: #FFF;
+    padding-top: 1.5rem;
+    font-weight: bold;
     @media only screen and (min-width:$cut){
       margin: 0;
       font-size: 100px;
@@ -74,6 +76,8 @@
     display: block;
     line-height: 1;
     color: #FFF;
+    padding-top: 1.5rem;
+    font-weight: bold;
     @media only screen and (min-width:$cut){
       margin: 0;
       font-size: 100px;
@@ -95,6 +99,11 @@
       font-size: 40px;
     }
   }
+}
+
+.header_small .site-title a {
+  text-decoration: none !important;
+  border-bottom: none !important;
 }
 
 .header-links {

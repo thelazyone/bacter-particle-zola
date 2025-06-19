@@ -53,11 +53,13 @@ code {
   }
 }
 
-a,
-a:visited {
+// Only underline links in .content
+.content a,
+.content a:visited {
   color: var(--accent-color);
-  text-decoration: none;
-  border-bottom: 1px solid var(--accent-color-light);
+  text-decoration: underline;
+  font-weight: bold;
+  border-bottom: none;
 }
 
 main {
@@ -147,4 +149,44 @@ hr {
   main {
     padding-top: 1rem;
   }
+}
+
+div.content img, article img, .blog-page img, .content img, main img {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+h1, h2, h3 {
+  margin-top: 1.2rem;
+  margin-bottom: 0.6rem;
+  padding-top: 0;
+  line-height: 1.15;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.2rem;
+}
+
+// Remove underline from header site title link
+.header_small .site-title, .header .site-title, .header_small .site-title a, .header .site-title a {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+// Remove underline from header site title link in blog context
+.blog-page .header_small .site-title a {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.header_small .site-title a, .header .site-title a {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  font-weight: bold !important;
 }
