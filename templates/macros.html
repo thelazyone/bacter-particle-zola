@@ -91,7 +91,7 @@
     </h1>
     <div class="header-links">
       {% for link in config.extra.nav %}
-        <a class="link" href="{{ link.path }}">{{ link.name }}</a>
+        <a class="link" href="{{ get_url(path=link.path) }}">{{ link.name }}</a>
       {% endfor %}
     </div>
   </div>
