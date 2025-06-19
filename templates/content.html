@@ -10,12 +10,12 @@
     <div class="tech"> 
       <h2>3D Sculpting</h2>
       <i class="devicon-blender-original colored"></i>
-      <i class="devicon"><img src={{ config.base_url ~ "/img/sketchup_logo.svg"}}></i>
+      <i class="devicon"><img src="{{ get_url(path="img/sketchup_logo.svg") }}"></i>
       <p>Once a traditional sculptor, now 3D modelling from concept art to <b>3D-printed miniatures</b>. Striving to maintain the highest standards in the miniatures industry and running an <b>online store</b>.</br> Toying with <b>procedural generation</b> and mesh manipulation.</p>
     </div>
     <div class="tech">
       <h2>Game Design</h2>
-      <i class="devicon"><img src={{ config.base_url ~ "/img/tlf_logo.svg"}}></i>
+      <i class="devicon"><img src="{{ get_url(path="img/tlf_logo.svg") }}"></i>
       <i class="devicon-photoshop-line"></i>
       <p>Creator of boardgames and wargames.</br>  Author of <b>Full Spectrum Dominance</b>, Round of Fire, and countless unpublished prototypes.</br> Involved in <b>every step</b> of game development, from initial drafts to graphics, all the way through to community management.</p>
     </div>
@@ -30,7 +30,7 @@
 <!-- lazy-tree -->
 <div class="projects-grid">
   <div class="users-projects">
-    <a href="https://github.com/thelazyone/lazy-tree"><img class="images-center" alt="Lazy Tree" src="{{ config.base_url ~ "/img/oaks.jpg" }}" /></a>
+    <a href="https://github.com/thelazyone/lazy-tree"><img class="images-center" alt="Lazy Tree" src="{{ get_url(path="img/oaks.jpg") }}" /></a>
     <div class="contents-center">
       <h3> Procedural Trees Generation </h3>
       <p>A Blender script to generate realistic trees with a bottom-up approach. Currently in python, the next version will be re-written in Rust with new more accurate simulation logics.</p>
@@ -38,14 +38,14 @@
   </div>
 
   <div class="users-projects">
-    <a href="https://github.com/thelazyone/Bacter/"><img class="images-center" alt="Bacter" src="{{ config.base_url ~ "/img/bacter.jpg" }}" /></a>
+    <a href="https://github.com/thelazyone/Bacter/"><img class="images-center" alt="Bacter" src="{{ get_url(path="img/bacter.jpg") }}" /></a>
     <div class="contents-center">
       <h3> Bacter: an Evolution Simulator </h3>
       <p>A Petri dish where simple cellular automata compete for reproduction. Not only the fittest characteristic are selected, but over time those maxima move in the parameters space!</p>
     </div>
   </div>
   <div class="users-projects">
-    <a href="https://fsd-wargame.com/"><img class="images-center" alt="Full Spectrum Dominance" src="{{ config.base_url ~ "/img/fsd.jpg" }}" /></a>
+    <a href="https://fsd-wargame.com/"><img class="images-center" alt="Full Spectrum Dominance" src="{{ get_url(path="img/fsd.jpg") }}" /></a>
     <div class="contents-center">
       <h3> Full Spectrum Dominance </h3>
       <p>A small-scale miniature wargame, with a fresh and modern ruleset. The models and the terrain are all original creations, that players can purchase and print at home, making the game entirely print-and-play.</p>

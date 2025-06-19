@@ -21,6 +21,8 @@ Refer to [particle-zola](https://github.com/svavs/particle-zola) for anything no
 [Bacter](https://github.com/thelazyone/Bacter/) itself is going to be provided as binary for the time being. 
 In the future it will instead part of the theme building process.
 
+Just call `zola serve` to run it locally.
+
 ## Issues
 
 For any problem or suggestion regarding Bacter, please file a [GitHub Issue](https://github.com/thelazyone/Bacter/issues/new) on the Bacter repo.
