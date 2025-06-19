@@ -181,11 +181,11 @@
     object-fit: contain;
     background: transparent;
     &:hover {
-      filter: brightness(0) invert(0); /* Makes the SVG black on hover */
+      filter: brightness(1) invert(0); /* Makes the SVG black on hover */
       background: #FFF;
     }
     &:active {
-      filter: brightness(0) invert(0); /* Makes the SVG black on active */
+      filter: brightness(1) invert(0); /* Makes the SVG black on active */
       background: #FFF;
     }
     @media only screen and (min-width:$cut) {
