@@ -2,7 +2,7 @@
 
 Particle-zola is a port for Zola of the Particle Jekyll theme. Check out the repo at https://github.com/svavs/particle-zola.
 
-The only change in the theme consists in a different background logic.
+The main change in the theme consists in a different background logic.
 
 ![](./screenshot.jpg)
 
@@ -22,6 +22,105 @@ Refer to [particle-zola](https://github.com/svavs/particle-zola) for anything no
 In the future it will instead part of the theme building process.
 
 Just call `zola serve` to run it locally.
+
+## Content Structure
+
+This theme supports dynamic projects and blog posts through markdown files. Here's the folder structure:
+
+```
+content/
+├── projects/           # Dynamic projects for homepage
+│   ├── _index.md      # Projects section index
+│   ├── project1.md    # Individual project files
+│   └── project2.md
+├── blog/              # Blog posts
+│   ├── _index.md      # Blog section index
+│   └── post-name/     # Individual blog posts
+│       └── index.md
+└── about.md           # About page
+```
+
+### Projects
+
+Projects are displayed dynamically on the homepage. First, create a `content/projects/_index.md` file:
+
+```markdown
++++
+title = "Projects"
+description = "A collection of my projects"
+sort_by = "weight"
++++
+
+This section showcases my various projects and creations.
+```
+
+Then create individual project files in `content/projects/` with the following format:
+
+```markdown
++++
+title = "Project Name"
+weight = 1
+
+[extra]
+description = "Brief description of your project that will be displayed on the homepage."
+image = "img/project-image.jpg"
+link = "https://github.com/username/project"
++++
+
+## Project Details
+
+Your project content goes here. This will be displayed if someone visits the individual project page.
+
+### Features
+- Feature 1
+- Feature 2
+```
+
+### Blog Posts
+
+Create blog posts in `content/blog/post-name/index.md`:
+
+```markdown
++++
+title = "Your Blog Post Title"
+date = 2024-01-15
+description = "A brief description of your blog post"
+
+[taxonomies]
+tags = ["tag1", "tag2"]
++++
+
+# Your Blog Post Content
+
+Write your blog post content here using markdown.
+
+## Sections
+
+You can use all standard markdown features.
+```
+
+### Configuration
+
+Make sure your `config.toml` includes:
+
+```toml
+base_url = "https://yourdomain.com"
+theme = "bacter-particle-zola"
+
+[extra]
+username = "Your Name"
+user_description = "Your description"
+user_title = "Your Title"
+```
+
+### Quick Start
+
+1. Create the projects section: `content/projects/_index.md`
+2. Add project files: `content/projects/project-name.md`
+3. Add images to: `static/img/`
+4. Run: `zola serve`
+
+The `weight` field in projects controls the display order (lower numbers appear first).
 
 ## Issues
 

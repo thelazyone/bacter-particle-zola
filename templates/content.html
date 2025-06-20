@@ -27,30 +27,20 @@
   <h3><p> {{ config.extra.user_description }} </p></h3>
 </div>
 
-<!-- lazy-tree -->
+<!-- Dynamic Projects from markdown files -->
+{% set projects_section = get_section(path="projects/_index.md") %}
 <div class="projects-grid">
-  <div class="users-projects">
-    <a href="https://github.com/thelazyone/lazy-tree"><img class="images-center" alt="Lazy Tree" src="{{ get_url(path="img/oaks.jpg") }}" /></a>
-    <div class="contents-center">
-      <h3> Procedural Trees Generation </h3>
-      <p>A Blender script to generate realistic trees with a bottom-up approach. Currently in python, the next version will be re-written in Rust with new more accurate simulation logics.</p>
+  {% for page in projects_section.pages %}
+    <div class="users-projects">
+      <a href="{{ page.extra.link | default(value="#") }}">
+        <img class="images-center" alt="{{ page.title }}" src="{{ get_url(path=page.extra.image | default(value="img/icon.png")) }}" />
+      </a>
+      <div class="contents-center">
+        <h3> {{ page.title }} </h3>
+        <p>{{ page.extra.description | default(value="No description available") }}</p>
+      </div>
     </div>
-  </div>
-
-  <div class="users-projects">
-    <a href="https://github.com/thelazyone/Bacter/"><img class="images-center" alt="Bacter" src="{{ get_url(path="img/bacter.jpg") }}" /></a>
-    <div class="contents-center">
-      <h3> Bacter: an Evolution Simulator </h3>
-      <p>A Petri dish where simple cellular automata compete for reproduction. Not only the fittest characteristic are selected, but over time those maxima move in the parameters space!</p>
-    </div>
-  </div>
-  <div class="users-projects">
-    <a href="https://fsd-wargame.com/"><img class="images-center" alt="Full Spectrum Dominance" src="{{ get_url(path="img/fsd.jpg") }}" /></a>
-    <div class="contents-center">
-      <h3> Full Spectrum Dominance </h3>
-      <p>A small-scale miniature wargame, with a fresh and modern ruleset. The models and the terrain are all original creations, that players can purchase and print at home, making the game entirely print-and-play.</p>
-    </div>
-  </div>
+  {% endfor %}
 </div>
 {% endmacro projects %}
 
