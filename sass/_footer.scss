@@ -1,7 +1,7 @@
 .footer {
   background: $main;
   padding: 10px 0;
-  margin-top: 100px;
+  margin-top: auto; // This pushes footer to bottom in flex container
   text-align: center;
   color: #FFF;
   .love {
@@ -17,5 +17,28 @@
     &:active {
       color: $sec;
     }
+  }
+}
+
+// Sticky footer for all pages
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
+  // For homepage
+  section#projects {
+    flex: 1; // Takes up available space
+  }
+}
+
+// Sticky footer for blog pages
+body.blog-page {
+  main {
+    flex: 1; // Takes up available space
+  }
+  
+  .footer-page {
+    margin-top: auto; // Pushes footer to bottom
   }
 }
