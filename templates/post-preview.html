@@ -1,16 +1,26 @@
 {% macro post_preview(post) %}
   <div class="post-preview">
-    <h3 class="post-title"><a href="{{ post.permalink }}">{{ post.title }}</a></h3>
-    <small>
-      {{ post.date| date(format="%B %d, %Y") }} - {{ post.word_count }} words - {{ post.reading_time }} mins
-    </small>
-    <div class="summary">
-      {% if post.summary -%}
-        {{ post.summary }}
-      {% else %}
-        {{ post.content | safe | striptags | truncate(length=300) }}
-      {%- endif %}
-      <a href="{{ post.permalink }}">read more</a>
+    <div class="post-content">
+      <h3 class="post-title"><a href="{{ post.permalink }}">{{ post.title }}</a></h3>
+      <small>
+        {{ post.date| date(format="%B %d, %Y") }} - {{ post.word_count }} words - {{ post.reading_time }} mins
+      </small>
+      <div class="summary">
+        {% if post.extra and post.extra.excerpt -%}
+          {{ post.extra.excerpt }}
+        {% elif post.summary -%}
+          {{ post.summary }}
+        {% else %}
+          {{ post.content | safe | striptags | truncate(length=300) }}
+        {%- endif %}
+      </div>
     </div>
+    {% if post.extra and post.extra.preview_image %}
+      <div class="post-image">
+        <a href="{{ post.permalink }}">
+          <img src="{{ get_url(path=post.path ~ post.extra.preview_image) }}" alt="{{ post.title }}" />
+        </a>
+      </div>
+    {% endif %}
   </div>
 {% endmacro input %}

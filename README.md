@@ -88,6 +88,10 @@ description = "A brief description of your blog post"
 
 [taxonomies]
 tags = ["tag1", "tag2"]
+
+[extra]
+preview_image = "preview.jpg"
+excerpt = "Custom excerpt text that appears in the blog listing instead of auto-generated text."
 +++
 
 # Your Blog Post Content
@@ -98,6 +102,10 @@ Write your blog post content here using markdown.
 
 You can use all standard markdown features.
 ```
+
+**Blog Post Features:**
+- `preview_image`: Image file in the same folder as your blog post (appears in blog listing)
+- `excerpt`: Custom preview text for the blog listing (optional - falls back to auto-generated excerpt)
 
 ### Configuration
 
