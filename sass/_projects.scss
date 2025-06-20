@@ -12,14 +12,33 @@
 
 .projects-grid {
   display: grid;
-  // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 20px; /* space between columns and rows */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  
+  // Responsive breakpoints
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; // Single column on mobile
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr); // Two columns on tablet
+  }
+  
+  @media (min-width: 1025px) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 
 .user-projects {
   margin: 20px auto;
+  width: 100%;
+  max-width: 350px;
+  
   img {
     max-width: 100%;
     height: auto;
